@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      #createAccountBtn {
+        background-image: linear-gradient(to left, #7B91FF, #95BEFF);
+      }
+      #termsId {
+        color: #7B91FF;
+      }
+      #privacyId {
+        color: #7B91FF;
+      }
+      #loginLink {
+        color: #7B91FF;
+      }
+      #agree {
+        cursor: pointer;
+      }
+      input[type='checkbox'] {
+      accent-color: rgb(233, 28, 141);
+      }
+      
+
+      @media (max-width: 640px) {
+      .container {
+        max-width: 90%;
+      }
+      #createAccountBtn {
+        font-size: 16px;
+      }
+    }
+    </style>
+    <script defer src="main.js"></script>
+    <script>
+      function handleCheckbox() {
+      var checkbox = document.getElementById('agree');
+      if (checkbox.checked) {
+        checkbox.disabled = true; // Disable the checkbox once checked
+      }
+    }
+    </script>
+  </head>
+  <body class="rounded-lg">
+    <header class="bg-white py-2">
+      <div class="container mx-auto flex justify-between items-center px-2">
+        <div>
+          <h1 class="text-lg font-bold">9:41</h1>
+        </div>
+        <div>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container mx-auto py-8">
+        <div class="flex justify-center py-3 w-full max-w-sm mx-auto">
+          <h1 class="text-3xl font-bold w-full text-left">Create an account</h1>
+        </div>
+        <div class="py-8">
+          <form id="createAccountForm" class="w-full max-w-sm mx-auto">
+            <div class="mb-4">
+              <input type="text" id="firstName" name="firstName" class="w-full px-4 py-4 my-3 border rounded-2xl bg-gray-200 font-bold" placeholder="First name" required>
+            </div>
+            <div class="mb-4">
+              <input type="text" id="lastName" name="lastName" class="w-full px-4 py-4 my-3 border rounded-2xl bg-gray-200 font-bold" placeholder="Last name" required>
+            </div>
+            <div class="mb-4">
+              <input type="email" id="email" name="email" class="w-full px-4 py-4 my-3 border rounded-2xl bg-gray-200 font-bold font-bold" placeholder="Email" required>
+            </div>
+            <div class="mb-4">
+              <input type="password" id="password" name="password" class="w-full px-4 py-4 my-3 border rounded-2xl bg-gray-200 font-bold" placeholder="Password" required>
+              
+            </div>
+            <div class="mb-4 mt-3 flex justify-center">
+              <input type="checkbox" id="agree" name="agree" class="mr-2 w-6 h-6" onclick="handleCheckbox()">
+              <label for="agree" class="text-gray-700">By proceeding, I agree to all <a href="#" id="termsId" class="underline text-blue-300">T&C</a> and  <a href="#" id="privacyId" class="underline text-blue-300">Privacy Policy</a></label>
+            </div>
+            <button id="createAccountBtn" type="submit" class="bg-blue-500 text-white px-4 py-3 mt-24 rounded-2xl w-full font-bold text-lg">Create an Account</button>
+            <div class="mb-4 flex items-center">
+              <hr class="flex-grow border-b border-gray-300 mr-2">
+              <span class="text-gray-600 my-5">Or</span>
+              <hr class="flex-grow border-b border-gray-300 ml-2">
+            </div>
+            <div class="flex justify-center">
+              <div class="mr-2 border border-gray-600 w-10 h-10 rounded-lg flex items-center justify-center">
+                <img src="images/google icon.png" alt="">
+              </div>
+
+              <div class="mr-2 border border-gray-600 w-10 h-10 rounded-lg flex items-center justify-center">
+                <img src="images/facebook icon.png" alt="">
+              </div>
+            </div>
+            <p class="text-center text-gray-600 my-5">Already have an account? <a id="loginLink" href="#" class="text-blue-500 underline">Login</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

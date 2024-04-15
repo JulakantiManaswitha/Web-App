@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      #confirmBtn {
+        background-image: linear-gradient(to left, #7B91FF, #95BEFF);
+      }
+    </style>
+    <script defer src="main.js"></script>
+  </head>
+  <body class=" rounded-lg">
+    <header class="bg-white py-2">
+      <div class="mx-auto flex justify-between items-center px-2">
+        <div>
+          <h1 class="text-lg font-bold">9:41</h1>
+        </div>
+        <div>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="mx-auto py-8">
+        <div class="flex justify-center py-3 ">
+          <h1 class="text-3xl font-bold ">What are your goals?</h1>
+        </div>
+        <div class="py-8">
+          <form id="Form" class="w-full max-w-sm mx-auto">
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200 ">
+              <span class="text-lg">Weight Loss</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200 ">
+              <span class="text-lg">Muscle Gain</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200 ">
+              <span class="text-lg">Flexibility and Mobility</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200">
+              <span class="text-lg">General Fitness</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200 ">
+              <span class="text-lg">Event - specific training</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <div class="w-full mx-auto my-3 flex justify-between items-center px-3 py-3 border rounded-2xl bg-gray-200 ">
+              <span class="text-lg">Mindfulness and Mental Health</span>
+              <input type="checkbox" id="checkbox1" class="w-5 h-5">
+            </div>
+            <button id="confirmBtn" type="submit" class="bg-red-300 mt-20 text-white text-2xl px-3 py-3 my-3 border rounded-2xl w-full font-bold">Confirm</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

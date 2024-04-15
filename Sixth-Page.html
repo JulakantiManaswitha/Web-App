@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+
+      #cautionId {
+        background-image: linear-gradient(90.07deg, rgba(129, 157, 255, 0.28) 5.94%, rgba(16, 16, 16, 0) 76.45%);
+      }
+      body {
+        box-sizing: border-box;
+      }
+      #FullBodyWorkoutDiv {
+        background-color: #7b8ee4;
+      }
+      @media (max-width: 640px ) {
+          header{
+            margin: 10px;
+          }
+          main{
+            margin: 25px 10px;
+          }
+          .chart-container {
+        position: relative;
+      }
+      .chart-text1 {
+        position: absolute;
+        top: -30px; 
+        left: 45.2%;
+        transform: translateX(-50%);
+      }
+      .chart-text2 {
+        position: absolute;
+        top: -30px; 
+        left: 76.5%;
+        transform: translateX(-50%);
+      }
+      .symbol-1 {
+        position: absolute;
+        top: -10px;
+        left: 45.2%;
+        transform: translateX(-50%);
+        padding: 2px;
+      }
+      .symbol-2 {
+        position: absolute;
+        top: -10px;
+        left: 76.5%;
+        transform: translateX(-50%);
+        padding: 2px;
+      }
+    
+      }
+
+      @media (max-width: 1400px) {
+        .chart-container {
+        position: relative;
+      }
+      .chart-text1 {
+        position: absolute;
+        top: -30px; 
+        left: 45.2%;
+        transform: translateX(-50%);
+      }
+      .chart-text2 {
+        position: absolute;
+        top: -30px; 
+        left: 76.5%;
+        transform: translateX(-50%);
+      }
+      .symbol-1 {
+        position: absolute;
+        top: -10px;
+        left: 45.2%;
+        transform: translateX(-50%);
+        padding: 2px;
+      }
+      .symbol-2 {
+        position: absolute;
+        top: -10px;
+        left: 76.5%;
+        transform: translateX(-50%);
+        padding: 2px;
+      }
+      }
+    </style>
+    <script defer src="main.js"></script>
+  </head>
+
+  <body class="relative rounded-lg z-0">
+    <header class="bg-white">
+      <div class="mx-auto flex justify-between items-center px-2">
+        <div>
+          <h1 class="text-lg font-bold">9:41</h1>
+        </div>
+        <div>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+    </header>
+
+      <main>
+        <div class="px-3 flex justify-between items-center">
+          <i class="fas fa-chevron-left bg-gray-300 p-1 rounded"></i>
+          <h1 class="text-3xl font-bold mx-auto">Workout Tracker</h1>
+        </div>
+
+        <div class="chart-container px-3 bg-gray-300 mx-2 w-auto">
+          <p class="chart-text1 text-lg text-green-500 font-semibold">Good Job</p>
+          <p class="chart-text2 text-lg text-red-400 font-semibold">&lt; 20cal</p>
+          <img src="images/Union.png" alt="" class="symbol-1">
+          <img src="images/Union.png" alt="" class="symbol-2 ">
+          <img id= "chartLink" src="images/Chart Full.png" alt="Chart Image" class="w-full mt-20 cursor-pointer">
+        </div>
+
+        <div id="cautionId" class="flex items-center rounded-xl my-7 mx-2">
+          <i class="fas fa-exclamation-triangle text-blue-300 text-2xl m-3"></i>
+          <p class="text-gray-700 mx-1">You've burned fewer calories than yesterday. Time to get moving! </p>
+        </div>
+
+        <div class="flex justify-between items-center px-3 pt-2 opacity-0.5">
+          <h2 class="text-xl font-bold">Upcoming Workout</h2>
+          <p class="text-gray-500">See more</p>
+        </div>
+
+        <div class="bg-white rounded-xl mx-3 mt-6 flex justify-between items-center p-4 shadow-md shadow-gray-700">
+          <div class="flex justify-front items-center">
+            <img src="images/Girl.png" alt="" class="w-16 h-16 rounded-full mr-2">
+            <div class="text-left">
+              <h2 class="text-lg font-bold">Full Body Workout</h2>
+              <p class="text-md text-gray-500">Today 3pm</p>
+            </div>
+          </div>
+          <button id="toggle1" class="text-blue-300 font-semibold">
+            <i id="toggleIcon" class="fas fa-toggle-on text-5xl" onclick="toggleSwitch('toggle1')"></i> 
+          </button>        
+        </div>
+
+        <div class="bg-white rounded-xl flex justify-between items-center mx-3 my-4 p-4 shadow-md shadow-gray-700">
+          <div class="flex justify-front items-center">
+            <img src="images/Girl2.png" alt="" class="w-16 h-16 rounded-full mr-2">
+            <div class="text-left">
+              <h2 class="text-lg font-bold">Upper Body Workout</h2>
+              <p class="text-md text-gray-500">4 Feb, 3:30 pm</p>
+            </div>
+          </div>
+          <button id= "toggle2" class="text-blue-300 font-semibold">
+            <i id="toggleIcon" class="fas fa-toggle-on text-5xl" onclick="toggleSwitch('toggle2')"></i> 
+          </button>
+        </div>
+
+        <h2 class="text-lg font-bold mx-3">What Do You Want to Train</h2>
+
+        <div id="FullBodyWorkoutDiv" class = "rounded-xl flex justify-between mx-3 p-3 my-2">
+          <div class="text-left">
+            <h3 class="text-lg">Full Body Workout</h3>
+            <p class="text-md text-gray-900">Arms</p>
+            <p class="text-md text-gray-900">Chest</p>
+          </div>
+            <img src="images/Girl3.png" alt="" class="w-28 h-28 rounded-full">
+        </div>
+        
+        <div>
+          <div class="icons fixed bottom-0 w-full flex justify-between items-center z-10 -mx-2">
+            <img src="images/Vector (4).png" alt="">
+            <img src="images/Group.png" alt="">
+            <img src="images/camera.png" alt="">
+            <img src="images/profile.png" alt="">
+          </div>
+
+            <div class="flex justify-center">
+            <img src="images/Group 1.png" alt="" class="fixed bottom-0 w-12 h-12 z-20">
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

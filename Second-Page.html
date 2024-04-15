@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom Styles */
+      .styled-skip {
+        border:2px solid rgb(46, 154, 243);
+        background-color: rgb(46, 154, 243);
+        border-radius: 5px;
+        transition: background-color 0.2s ease border 0.2s ease border-radius 0.2s ease;
+        
+      }
+
+      #skipLink {
+        color: #89A1FF;
+        text-decoration: underline;
+      }
+
+      /* Mobile Version */
+      @media (max-width: 640px) {
+        .py-2 {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+        }
+        .w-full {
+          width: 100%; 
+        }
+        .h-400 {
+          height: auto; 
+        }
+        .py-8 {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+
+      }
+    </style>
+    <script defer src="main.js"></script>
+  </head>
+
+  <body class="rounded-lg px-3 py-3">
+
+    <header>
+      <div class="mx-auto flex justify-between items-center">
+        <h1 class="text-lg font-bold">9:41</h1>
+        <div>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="mx-auto">
+          <div class="flex justify-end items-center h-12 my-2">
+            <a href="#" id="skipLink2" class="text-2xl">Skip</a>
+          </div>
+             
+          <div class="flex justify-center ">
+            <img src="images/image 16.png" class="my-20 border border-gray-500 rounded-lg bg-blue-200">
+          </div>
+
+            <h2 class="text-3xl font-bold">Track Your Goal</h2>
+            <p class="py-2 text-2xl">Don’t worry if you have trouble determining your goals, We can help you determine your goals and track your goals.</p>
+
+      </div>
+    </main>
+
+    <footer class="my-8">
+      <div class="mx-auto flex justify-end">
+        <div id="chevronContainer2" class="rounded-full w-20 h-20 chevron-pointer flex justify-center items-center">
+          <img src="images/chevron.png" alt="chevron">
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
